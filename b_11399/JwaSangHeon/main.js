@@ -17,8 +17,6 @@ function solution(input) {
     result += sum;
   }
 
-  // console.log(peopleCount);
-  // console.log(withdrawalTimesArray);
   console.log(result);
 }
 
