@@ -8,6 +8,4 @@
 /dataSources.local.xml
 
 #out files
-out/
-#.idle
-.idle
+/out/
