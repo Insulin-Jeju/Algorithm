@@ -13,7 +13,7 @@ public class BOJ_11399{
             arr[i] = Integer.parseInt(st.nextToken());
         }
 
-        Arrays.sort(arr);
+        Arrays.sort(arr); //정렬
 
         int sum = arr[0];
         for(int i=1; i<N; i++) {
