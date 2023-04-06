@@ -12,3 +12,6 @@
 *.iml
 out
 gen
+
+# MAC
+.DS_Store
