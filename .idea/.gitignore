@@ -1,6 +1,6 @@
 # Default ignored files
 /shelf/
-/.idea/workspace.xml
+/workspace.xml
 # Editor-based HTTP Client requests
 /httpRequests/
 # Datasource local storage ignored files
@@ -16,5 +16,5 @@
 out
 /.idea/
 
-# MAC #
+# MAC
 .DS_Store
