@@ -1,7 +1,5 @@
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Arrays;
-
 public class Programmers_K번째수 {
     static void insertSort(int @NotNull [] arr) {
         for (int i = 1; i < arr.length; i++) {
