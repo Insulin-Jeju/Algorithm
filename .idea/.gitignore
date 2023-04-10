@@ -9,9 +9,11 @@
 
 # IntelliJ IDEA #
 .idea
+.idea/*
+*.iws
 *.iml
+*.ipr
 out
-gen
 
 # MAC #
 .DS_Store
