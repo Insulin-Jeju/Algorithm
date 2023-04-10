@@ -26,9 +26,9 @@ public class Programmers_K번째수 {
                 int[] tmp = new int[eIndex - sIndex + 1];
 
                 int idx = 0;
-                for (int j = 0; j<tmp.length; j++) {
+                for (int j = 0; j < tmp.length; j++) {
 //                    System.out.println(j +" "+ idx);
-                    tmp[idx] = array[j+(sIndex-1)];
+                    tmp[idx] = array[j + (sIndex - 1)];
                     idx++;
                 }
                 insertSort(tmp);
