@@ -15,5 +15,5 @@
 *.ipr
 out
 
-# MAC #
+# MAC
 .DS_Store
