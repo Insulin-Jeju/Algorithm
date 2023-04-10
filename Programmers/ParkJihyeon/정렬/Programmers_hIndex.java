@@ -20,12 +20,23 @@ public class Programmers_hIndex {
 
             insertSort(citations);
 
-            for (int i = 0; i < citations.length; i++) {
-                h = citations.length - i;
+            h = citations[citations.length/2];
 
+            int cnt = 0;
+            for (int i = 0; i < citations.length; i++) {
                 if (citations[i] >= h) {
+                    cnt++;
+                }
+            }
+            int low = 0;
+            int high = 0;
+
+            while (low <= high) {
+                if (cnt >= h) {
                     answer = h;
-                    break;
+                    low = h + 1;
+                } else if(h > cnt) {
+                    high = h - 1;
                 }
             }
             return answer;
