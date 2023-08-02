@@ -1,4 +1,3 @@
-n = int(input())
 def cost(n, memo=[[0,0], [0,1], [0,2]]):
     if n == 0:
         new_memo = []
@@ -20,4 +19,4 @@ def cost(n, memo=[[0,0], [0,1], [0,2]]):
     memo = []
     memo += tmp
     return cost(n-1, memo)
-cost(n)
+cost(int(input()))
