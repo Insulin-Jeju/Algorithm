@@ -1,21 +1,13 @@
-def cost(n, memo=[[0,0], [0,1], [0,2]]):
+import sys
+sys.setrecursionlimit(10**7)
+def cost(n, memo=[0, 0, 0]):
     if n == 0:
-        new_memo = []
-        for i in memo:
-            new_memo.append(i[0])
-        return print(min(new_memo))
+        return print(min(memo))
     tmp = []
     array = input().split()
-    for j in memo:
-        if j[1] == 0:
-            tmp.append([j[0] + int(array[1]),1])
-            tmp.append([j[0] + int(array[2]),2])
-        if j[1] == 1:
-            tmp.append([j[0] + int(array[0]),0])
-            tmp.append([j[0] + int(array[2]),2])
-        if j[1] == 2:
-            tmp.append([j[0] + int(array[0]),0])
-            tmp.append([j[0] + int(array[1]),1])
+    tmp.append((int(array[0]) + min(memo[1], memo[2])))
+    tmp.append((int(array[1]) + min(memo[0], memo[2])))
+    tmp.append((int(array[2]) + min(memo[0], memo[1])))
     memo = []
     memo += tmp
     return cost(n-1, memo)
