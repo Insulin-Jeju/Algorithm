@@ -1,5 +1,4 @@
 class TrieNode:
-    
     def __init__(self):
         self.children = {}
         
@@ -29,6 +28,8 @@ class Trie:
 
         # 단어 전체를 트라이에 삽입했으면
         # 마지막으로 *를 추가한다.
+        if currentNode.children:
+            overlap = True
         currentNode.children["*"] = True
         return overlap
 
@@ -41,6 +42,6 @@ for _ in range(n):
         if trie.insert(input()):
             consistency = True
     if consistency:
-        print("No")
+        print("NO")
     else:
         print("YES")
