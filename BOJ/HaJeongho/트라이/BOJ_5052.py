@@ -1,5 +1,4 @@
 class TrieNode:
-    
     def __init__(self):
         self.children = {}
         
@@ -10,6 +9,7 @@ class Trie:
         
     def insert(self, word):
         currentNode = self.root
+        overlap = False
         for char in word:
             if currentNode.children.get("*"):
                 overlap = True
@@ -28,16 +28,20 @@ class Trie:
 
         # 단어 전체를 트라이에 삽입했으면
         # 마지막으로 *를 추가한다.
-        currentNode.children["*"] = None
+        if currentNode.children:
+            overlap = True
+        currentNode.children["*"] = True
+        return overlap
 
 n = int(input())
 for _ in range(n):
     k = int(input())
     trie = Trie()
-    overlap = False
+    consistency = False
     for _ in range(k):
-        trie.insert(input())
-    if overlap:
+        if trie.insert(input()):
+            consistency = True
+    if consistency:
         print("NO")
     else:
         print("YES")
